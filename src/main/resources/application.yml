@@ -1,9 +1,9 @@
-server:
-  port: 8761
 spring:
   application:
-    name: eureka-server
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
+    name: eureka-service
+  profiles:
+    active: local
+  config:
+    import: configserver:http://localhost:8001
+  main:
+    allow-bean-definition-overriding: true
