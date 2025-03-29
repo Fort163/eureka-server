@@ -4,6 +4,6 @@ spring:
   profiles:
     active: ${ACTIVE_PROFILE:local}
   config:
-    import: ${CONFIG_SERVER:'configserver:http://localhost:8001'}
+    import: ${CONFIG_SERVER:configserver:http://localhost:8001}
   main:
     allow-bean-definition-overriding: true
